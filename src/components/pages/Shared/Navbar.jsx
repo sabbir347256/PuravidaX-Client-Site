@@ -1,0 +1,109 @@
+import React, { useState } from "react";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { ImCross } from "react-icons/im";
+import CustomButton from "../utils/CustomButton";
+import { NavLink } from "react-router";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const navLinks = [
+    "Home",
+    "Experiences",
+    "Flights",
+    "Hotels",
+    "Car Rentals",
+    "Plan Your Trip",
+    "Rewards",
+  ];
+  return (
+    <nav className="w-full bg-[#1d3d2c] text-white fixed top-0 z-50 cp">
+      <div className="container">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="logo" className="w-8 h-8" />
+            <span className="font-semibold text-lg">PuraVidaX</span>
+          </div>
+          <div className="hidden lg:flex items-center gap-6">
+            {navLinks.map((item) => (
+              <a key={item} href="#" className="hover:text-green-300 ">
+                {item}
+              </a>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-3">
+              <button className="border px-3 py-1 rounded-md text-sm">
+                🌐 EN
+              </button>
+              <CustomButton
+                text={"Log In"}
+                padding={"px-4 py-1"}
+                rounded={"rounded-md"}
+                hover={"bg-green-600"}
+                border={"border"}
+              ></CustomButton>
+              <NavLink to='/signup'>
+                <CustomButton
+                  text={"Sign Up"}
+                  bg={"bg-primary"}
+                  padding={"px-4 py-1"}
+                  rounded={"rounded-md"}
+                  hover={"bg-green-600"}
+                ></CustomButton>
+              </NavLink>
+            </div>
+            <div className="lg:hidden">
+              <button onClick={() => setOpen(!open)}>
+                {open ? <ImCross size={20} /> : <CgMenuRightAlt size={28} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`lg:hidden bg-green-800 overflow-hidden transition-all duration-500 ${
+          open ? "max-h-full py-4" : "max-h-0"
+        }`}
+      >
+        <div className="flex flex-col items-center gap-4">
+          {navLinks.map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="text-lg hover:text-green-300"
+              onClick={() => setOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
+          <div className="flex flex-col gap-2 mt-4 w-full px-6 md:hidden">
+            <CustomButton
+              text={"🌐 EN"}
+              padding={"py-2"}
+              rounded={"rounded-md"}
+              hover={"bg-green-600"}
+              border={"border"}
+            ></CustomButton>
+            <CustomButton
+              text={"Log In"}
+              padding={"px-4 py-2"}
+              rounded={"rounded-md"}
+              hover={"bg-green-600"}
+              border={"border"}
+            ></CustomButton>
+            <CustomButton
+              text={"Sign Up"}
+              bg={"bg-green-500"}
+              padding={"px-4 py-2"}
+              rounded={"rounded-md"}
+              hover={"bg-green-600"}
+            ></CustomButton>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
