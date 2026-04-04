@@ -44,7 +44,7 @@ const TopExperience = () => {
     },
   ];
   return (
-    <div className="bg-gray-100 py-32">
+    <div className="bg-gray-100  dynamic-Padding">
       <section className="container">
         <div className="flex items-center justify-between mb-10">
           <div>

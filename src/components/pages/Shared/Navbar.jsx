@@ -8,13 +8,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    "Home",
-    "Experiences",
-    "Flights",
-    "Hotels",
-    "Car Rentals",
-    "Plan Your Trip",
-    "Rewards",
+    { name: "Home", path: "/" },
+    { name: "Experiences", path: "/experiences" },
+    { name: "Flights", path: "/flights" },
+    { name: "Hotels", path: "/hotels" },
+    { name: "Car Rentals", path: "/cars" },
+    { name: "Plan Your Trip", path: "/plan-trip" },
+    { name: "Rewards", path: "/rewards" },
   ];
   return (
     <nav className="w-full bg-[#1d3d2c] text-white fixed top-0 z-50 cp">
@@ -25,10 +25,20 @@ const Navbar = () => {
             <span className="font-semibold text-lg">PuraVidaX</span>
           </div>
           <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((item) => (
-              <a key={item} href="#" className="hover:text-green-300 ">
-                {item}
-              </a>
+            {navLinks?.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                className={({ isActive }) =>
+                  `transition ${
+                    isActive
+                      ? "text-green-400 font-semibold"
+                      : "hover:text-green-300"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
             ))}
           </div>
           <div className="flex items-center gap-3">
@@ -43,7 +53,7 @@ const Navbar = () => {
                 hover={"bg-green-600"}
                 border={"border"}
               ></CustomButton>
-              <NavLink to='/signup'>
+              <NavLink to="/signup">
                 <CustomButton
                   text={"Sign Up"}
                   bg={"bg-primary"}
@@ -68,14 +78,14 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center gap-4">
           {navLinks.map((item) => (
-            <a
-              key={item}
-              href="#"
+            <NavLink
+              key={item.name}
+              to={item.path}
               className="text-lg hover:text-green-300"
               onClick={() => setOpen(false)}
             >
-              {item}
-            </a>
+              {item.name}
+            </NavLink>
           ))}
           <div className="flex flex-col gap-2 mt-4 w-full px-6 md:hidden">
             <CustomButton

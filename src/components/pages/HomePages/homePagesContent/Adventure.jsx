@@ -4,11 +4,10 @@ import { SiTarget } from "react-icons/si";
 
 const Adventure = () => {
   return (
-    <section className="bg-[#f5f5f2] py-28">
+    <section className="bg-[#f5f5f2] dynamic-Padding">
       <div className="grid lg:grid-cols-2 gap-32 items-center container">
         <div>
           <p className="text-green-600 text-sm mb-2">What We Offer</p>
-
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
             Create Your Costa Rica <br />
             <span className="text-green-600 italic font-semibold">
@@ -69,10 +68,9 @@ const Adventure = () => {
           <img
             src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775166229/d130f38725de9a0c0e85b35f61d91b4d99f373fb_qjzmi4.jpg"
             alt="Waterfall"
-            className="w-full h-[670px] object-cover rounded-3xl shadow-lg"
+            className="w-full h-[570px] object-cover rounded-3xl shadow-lg"
           />
 
-          {/* Floating Card */}
           <div className="absolute bottom-5 left-5 bg-white rounded-xl px-5 py-3 shadow-md flex items-center gap-3">
             <div className="bg-green-600 text-white p-2 rounded-lg">📍</div>
             <div>

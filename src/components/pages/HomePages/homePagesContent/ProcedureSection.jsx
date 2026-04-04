@@ -2,14 +2,14 @@ import React from "react";
 
 const ProcedureSection = () => {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden dynamic-Padding">
       <img
         src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775170112/90937d55190e90ffc9bcd7f9e70a5b0b8ab2005e_nywb7l.jpg"
         alt="Beach"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative z-10  text-white py-48 container">
+      <div className="relative z-10  text-white container">
         <div className="max-w-xl mb-16">
           <p className="uppercase tracking-widest text-sm opacity-70 mb-3">
             Process

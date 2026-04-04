@@ -13,6 +13,15 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
+.dynamic-Padding{
+  padding: 112px 10px 112px 10px;
+}
+.flight-dynamic-Padding{
+  padding: 80px 10px 80px 10px;
+}
+
+
+
 @layer components {
   .cp {
     @apply px-4 md:px-20;

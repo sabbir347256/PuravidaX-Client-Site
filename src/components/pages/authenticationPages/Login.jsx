@@ -16,16 +16,16 @@ const Login = () => {
     console.log("Form Data:", data);
   };
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex ">
       <div className="hidden lg:flex w-1/2 relative">
         <img
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+          src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775324128/90937d55190e90ffc9bcd7f9e70a5b0b8ab2005e_1_f8y7zq.jpg"
           alt="Costa Rica"
-          className="w-full h-full object-cover"
+          className="w-full h-screen object-cover"
         />
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="absolute bottom-1/2 left-1/4 text-white max-w-md">
-          <h1 className="text-5xl font-bold leading-tight">
+        <div className="absolute bottom-1/3 left-1/4 text-white">
+          <h1 className="text-6xl font-bold leading-tight">
             Begin Your <br /> Costa Rica Story
           </h1>
           <p className="mt-4 text-lg">

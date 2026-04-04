@@ -1,41 +1,9 @@
 import React from "react";
 
 const CostaricaFrame = () => {
-  const images = [
-    {
-      id: 1,
-      src: "beach-url.jpg",
-      alt: "Costa Rica Beach",
-      className: "col-span-2 h-64",
-    },
-    {
-      id: 2,
-      src: "parrot-url.jpg",
-      alt: "Macaw Parrot",
-      className: "col-span-1 h-64",
-    },
-    {
-      id: 3,
-      src: "toucan-url.jpg",
-      alt: "Toucan Bird",
-      className: "col-span-1 h-80",
-    },
-    {
-      id: 4,
-      src: "volcano-url.jpg",
-      alt: "Arenal Volcano",
-      className: "col-span-2 h-80",
-    },
-    {
-      id: 5,
-      src: "bridge-url.jpg",
-      alt: "Hanging Bridge",
-      className: "col-span-1 row-span-2 h-full",
-    },
-  ];
   return (
-    <div className="bg-[#f5eee6] text-[#2d4a3e]">
-      <div className="p-8 font-sans container allPY">
+    <div className="bg-[#f5eee6] text-[#2d4a3e] dynamic-Padding">
+      <div className=" container allPY">
         <div className="mb-8">
           <span className="text-xs font-semibold uppercase tracking-widest border-l-2 border-[#2d4a3e] pl-2">
             Visual Stories

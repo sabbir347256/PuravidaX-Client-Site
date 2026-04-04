@@ -7,26 +7,36 @@ import Root from "./components/pages/Root/Root";
 import Home from "./components/pages/HomePages/Home";
 import Signup from "./components/pages/authenticationPages/Signup";
 import Login from "./components/pages/authenticationPages/Login";
+import SearchSeciton from "./components/pages/Flights/SearchSeciton";
+import FlightDetails from "./components/pages/Flights/FlightDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children : [
+    children: [
       {
-        path : '/',
-        element : <Home></Home>
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/signup",
+        element: <Signup></Signup>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path : "/flights",
+        element : <SearchSeciton></SearchSeciton>
+      },
+      {
+        path : "/flight-details",
+        element : <FlightDetails></FlightDetails>
       }
     ],
   },
-  {
-    path : '/signup',
-    element : <Signup></Signup>
-  },
-  {
-    path : "/login",
-    element : <Login></Login>
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
