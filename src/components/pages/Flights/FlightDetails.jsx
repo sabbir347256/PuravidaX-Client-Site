@@ -8,48 +8,20 @@ import {
   BsHeadphones,
   BsShieldCheck,
 } from "react-icons/bs";
+import FlightDetailsDynamicHeader from "./FlightDetailsDynamicHeader";
+import { flightSteps } from "./FlightStep";
+import { NavLink } from "react-router";
 
 const FlightDetails = () => {
   return (
-    <div className="min-h-screen bg-[#F7F2E9] font-sans pb-20">
-      <header className="bg-[#112B1E] pt-12 pb-24 px-6 md:px-16 text-white">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-bold mb-2">Flight Details</h1>
-          <p className="text-gray-400 text-sm mb-8">
-            Review your selected flight before proceeding
-          </p>
-
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
-            <FlightStep
-              number={<BiCheck size={14} />}
-              label="Search"
-              active
-              completed
-            />
-            <div className="h-[1px] w-8 bg-[#5BA471]"></div>
-            <FlightStep number="2" label="Flight Details" active />
-            {[3, 4, 5, 6].map((num) => (
-              <React.Fragment key={num}>
-                <div className="h-[1px] w-8 bg-gray-600"></div>
-                <FlightStep
-                  number={num}
-                  label={
-                    num === 3
-                      ? "Passengers"
-                      : num === 4
-                        ? "Seats"
-                        : num === 5
-                          ? "Extras"
-                          : "Payment"
-                  }
-                />
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 flight-dynamic-Padding">
+    <div className="min-h-screen bg-[#F7F2E9]">
+      <FlightDetailsDynamicHeader
+        title="Flight Details"
+        subtitle="Review your selected flight before proceeding"
+        currentStep={2}
+        steps={flightSteps}
+      />
+      <main className="container px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 dynamic-paddingUP-Down ">
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-[#2D5A43] text-white rounded-2xl p-6 flex justify-between items-center">
             <div className="flex gap-4">
@@ -139,9 +111,11 @@ const FlightDetails = () => {
               <span className="text-2xl font-bold text-[#2D4A3E]">$942</span>
             </div>
 
-            <button className="w-full bg-[#215E41] hover:bg-[#1A4A33] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 mb-4 transition-all">
-              <BsArrowRight size={18} /> Continue to Passengers
-            </button>
+            <NavLink to='/passenger-details'>
+              <button className="w-full bg-[#215E41] hover:bg-[#1A4A33] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 mb-4 transition-all">
+                <BsArrowRight size={18} /> Continue to Passengers
+              </button>
+            </NavLink>
             <button className="w-full border border-[#215E41] text-[#215E41] py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all">
               <BsArrowLeft size={18} /> Back to Flights
             </button>

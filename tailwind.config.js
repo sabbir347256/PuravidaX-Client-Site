@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1f6b4e",
+        primary: "#1a3a2a"
       },
       container: {
         center: true,

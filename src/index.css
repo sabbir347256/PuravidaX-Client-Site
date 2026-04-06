@@ -13,28 +13,48 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
-.dynamic-Padding{
+.dynamic-Padding {
   padding: 112px 10px 112px 10px;
 }
-.flight-dynamic-Padding{
-  padding: 80px 10px 80px 10px;
+
+.globalBg{
+  background-color: #f7f4ef;
 }
 
+.dynamic-paddingUP-Down {
+  padding: 80px 0px 80px 0px;
+}
 
-
-@layer components {
-  .cp {
-    @apply px-4 md:px-20;
+@media (max-width: 767px) {
+  .dynamic-paddingUP-Down {
+    padding: 40px 0px 40px 0px;
   }
 }
 
+.global-button-background{
+  background-color: #1a3a2a;
+}
+
+@layer components {
+  .cp {
+    @apply px-4 md:px-10;
+  }
+}
+@layer components {
+  .lcp {
+    @apply px-0 md:px-0;
+  }
+}
 
 /* .allPY{
   padding-top: 80px;
   padding-bottom: 80px
 } */
 
-
 .container {
-  @apply max-w-[1440px] mx-auto px-4 md:px-0;
+  @apply max-w-[1440px] mx-auto px-4 md:px-10;
+}
+
+.mediumDeviceContainer {
+  @apply max-w-[1368px] mx-auto md:px-1;
 }

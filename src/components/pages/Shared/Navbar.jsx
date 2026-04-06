@@ -17,8 +17,8 @@ const Navbar = () => {
     { name: "Rewards", path: "/rewards" },
   ];
   return (
-    <nav className="w-full bg-[#1d3d2c] text-white fixed top-0 z-50 cp">
-      <div className="container">
+    <nav className="w-full bg-[#1a3a2a] text-white fixed top-0 z-50 cp">
+      <div className="mediumDeviceContainer">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="logo" className="w-8 h-8" />

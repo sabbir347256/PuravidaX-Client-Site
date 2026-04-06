@@ -9,6 +9,10 @@ import Signup from "./components/pages/authenticationPages/Signup";
 import Login from "./components/pages/authenticationPages/Login";
 import SearchSeciton from "./components/pages/Flights/SearchSeciton";
 import FlightDetails from "./components/pages/Flights/FlightDetails";
+import PassengerDetails from "./components/pages/Flights/PassengerPart/PassengerDetails";
+import BaggageDetails from "./components/pages/Flights/BaggagePart/BaggageDetails";
+import SeatDetails from "./components/pages/Flights/Seats/SeatDetails";
+import PaymentSection from "./components/pages/Flights/Payment/PaymentSection";
 
 const router = createBrowserRouter([
   {
@@ -28,12 +32,28 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path : "/flights",
-        element : <SearchSeciton></SearchSeciton>
+        path: "/flights",
+        element: <SearchSeciton></SearchSeciton>,
       },
       {
-        path : "/flight-details",
-        element : <FlightDetails></FlightDetails>
+        path: "/flight-details",
+        element: <FlightDetails></FlightDetails>,
+      },
+      {
+        path: "/passenger-details",
+        element: <PassengerDetails></PassengerDetails>,
+      },
+      {
+        path: "/extras",
+        element: <BaggageDetails></BaggageDetails>,
+      },
+      {
+        path : "/seat-plan",
+        element : <SeatDetails></SeatDetails>
+      },
+      {
+        path : '/procced-to-payment',
+        element : <PaymentSection></PaymentSection>
       }
     ],
   },

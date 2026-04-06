@@ -50,7 +50,7 @@ const FlightCard = ({airline,model,depTime,depCity,arrTime,arrCity,duration,pric
           className={`${isSelected ? "bg-[#215E41] text-white" : "border border-[#215E41] text-[#215E41]"} px-8 py-2 rounded-xl text-sm font-bold w-full md:w-28 transition-colors`}
         >
           Select
-        </button>
+        </button>                          
       </div>
     </div>
   );

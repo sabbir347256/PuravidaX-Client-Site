@@ -15,7 +15,7 @@ const Footer = () => {
     ],
   };
   return (
-    <footer className="bg-[#1B3B2B] text-gray-300 dynamic-Padding">
+    <footer className="bg-[#1a3a2a] text-gray-300 dynamic-Padding">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">

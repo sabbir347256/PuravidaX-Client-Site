@@ -14,8 +14,8 @@ const SearchSeciton = () => {
     console.log("Form Data:", data);
   };
   return (
-    <div className="min-h-screen bg-[#F7F2E9] pb-20">
-      <section className="bg-[#112B1E] pt-12 pb-24 px-6 md:px-16">
+    <div className="min-h-screen bg-[#F7F2E9]">
+      <section className="bg-[#112B1E] pt-12 pb-24">
         <div className="container">
           <p className="text-[#5BA471] text-xs font-bold uppercase tracking-widest mb-2">
             Book Your Flight
@@ -87,7 +87,7 @@ const SearchSeciton = () => {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 flight-dynamic-Padding md:container">
+      <section className=" flight-dynamic-Padding container dynamic-paddingUP-Down ">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[#2D4A3E] text-xl font-bold">
             Your Flight Options
