@@ -13,6 +13,7 @@ import PassengerDetails from "./components/pages/Flights/PassengerPart/Passenger
 import BaggageDetails from "./components/pages/Flights/BaggagePart/BaggageDetails";
 import SeatDetails from "./components/pages/Flights/Seats/SeatDetails";
 import PaymentSection from "./components/pages/Flights/Payment/PaymentSection";
+import DemoPage from "./components/pages/DemoPage/DemoPage";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,27 @@ const router = createBrowserRouter([
       {
         path : '/procced-to-payment',
         element : <PaymentSection></PaymentSection>
-      }
+      },
+      {
+        path : '/experiences',
+        element : <DemoPage></DemoPage>
+      },
+      {
+        path : '/hotels',
+        element : <DemoPage></DemoPage>
+      },
+      {
+        path : '/cars',
+        element : <DemoPage></DemoPage>
+      },
+      {
+        path : '/plan-trip',
+        element : <DemoPage></DemoPage>
+      },
+      {
+        path : '/rewards',
+        element : <DemoPage></DemoPage>
+      },
     ],
   },
 ]);

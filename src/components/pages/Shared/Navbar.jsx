@@ -21,8 +21,11 @@ const Navbar = () => {
       <div className="mediumDeviceContainer">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="logo" className="w-8 h-8" />
-            <span className="font-semibold text-lg">PuraVidaX</span>
+            <img
+              src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775605273/460debcf4221f79a0116a837f2d356714eecf599_pm9t7g.png"
+              alt="logo"
+              className="w-fit h-24"
+            />
           </div>
           <div className="hidden lg:flex items-center gap-6">
             {navLinks?.map((item) => (
@@ -46,17 +49,19 @@ const Navbar = () => {
               <button className="border px-3 py-1 rounded-md text-sm">
                 🌐 EN
               </button>
-              <CustomButton
-                text={"Log In"}
-                padding={"px-4 py-1"}
-                rounded={"rounded-md"}
-                hover={"bg-green-600"}
-                border={"border"}
-              ></CustomButton>
+              <NavLink to="/login">
+                <CustomButton
+                  text={"Log In"}
+                  padding={"px-4 py-1"}
+                  rounded={"rounded-md"}
+                  hover={"bg-green-600"}
+                  border={"border"}
+                ></CustomButton>
+              </NavLink>
               <NavLink to="/signup">
                 <CustomButton
                   text={"Sign Up"}
-                  bg={"bg-primary"}
+                  bg={"bg-green-700"}
                   padding={"px-4 py-1"}
                   rounded={"rounded-md"}
                   hover={"bg-green-600"}
