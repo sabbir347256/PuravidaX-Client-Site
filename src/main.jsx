@@ -14,6 +14,8 @@ import BaggageDetails from "./components/pages/Flights/BaggagePart/BaggageDetail
 import SeatDetails from "./components/pages/Flights/Seats/SeatDetails";
 import PaymentSection from "./components/pages/Flights/Payment/PaymentSection";
 import DemoPage from "./components/pages/DemoPage/DemoPage";
+import CarSearchSection from "./components/pages/CardModel/SearchPart/CarSearchSection";
+import CarDetails from "./components/pages/CardModel/CarDetails/CarDetails";
 
 const router = createBrowserRouter([
   {
@@ -66,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/cars',
-        element : <DemoPage></DemoPage>
+        element : <CarSearchSection></CarSearchSection>
       },
       {
         path : '/plan-trip',
@@ -76,6 +78,10 @@ const router = createBrowserRouter([
         path : '/rewards',
         element : <DemoPage></DemoPage>
       },
+      {
+        path : "/car-details",
+        element : <CarDetails></CarDetails>
+      }
     ],
   },
 ]);

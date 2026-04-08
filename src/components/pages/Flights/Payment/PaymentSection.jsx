@@ -33,14 +33,14 @@ const PaymentSection = () => {
   };
   return (
     <div>
-      <div>
+      <div >
         <FlightDetailsDynamicHeader
           title={"Proceed Payment"}
           subtitle={"Enhance your journey with add-ons and services"}
           currentStep={6}
           steps={flightSteps}
         ></FlightDetailsDynamicHeader>
-        <div className="min-h-screen globalBg md:p-8 text-gray-800">
+        <div className="min-h-screen globalBg md:p-8 text-gray-800 flightCarHotelContainer">
           <div className="container dynamic-paddingUP-Down">
             <header className="mb-6">
               <h1 className="text-2xl font-bold">Complete Flight Booking</h1>

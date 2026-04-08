@@ -87,7 +87,7 @@ const SearchSeciton = () => {
         </div>
       </section>
 
-      <section className=" flight-dynamic-Padding container dynamic-paddingUP-Down ">
+      <section className=" flight-dynamic-Padding container dynamic-paddingUP-Down flightCarHotelContainer">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[#2D4A3E] text-xl font-bold">
             Your Flight Options

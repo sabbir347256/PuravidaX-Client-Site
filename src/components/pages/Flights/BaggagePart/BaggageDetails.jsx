@@ -148,7 +148,7 @@ const BaggageDetails = () => {
         currentStep={4}
         steps={flightSteps}
       ></FlightDetailsDynamicHeader>
-      <div className="min-h-screen bg-[#f6f3ee] py-8 dynamic-paddingUP-Down ">
+      <div className="min-h-screen bg-[#f6f3ee] py-8 dynamic-paddingUP-Down flightCarHotelContainer ">
         <div className="container grid grid-cols-1 gap-6 lg:grid-cols-[1fr_320px]">
           <div className="space-y-5">
             {sections?.map((section) => (

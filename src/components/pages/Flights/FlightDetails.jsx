@@ -14,14 +14,14 @@ import { NavLink } from "react-router";
 
 const FlightDetails = () => {
   return (
-    <div className="min-h-screen bg-[#F7F2E9]">
+    <div className="min-h-screen bg-[#F7F2E9] ">
       <FlightDetailsDynamicHeader
         title="Flight Details"
         subtitle="Review your selected flight before proceeding"
         currentStep={2}
         steps={flightSteps}
       />
-      <main className="container px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 dynamic-paddingUP-Down ">
+      <main className="container px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 dynamic-paddingUP-Down flightCarHotelContainer ">
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-[#2D5A43] text-white rounded-2xl p-6 flex justify-between items-center">
             <div className="flex gap-4">

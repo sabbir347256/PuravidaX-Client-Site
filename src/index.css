@@ -21,6 +21,18 @@ body {
   background-color: #f7f4ef;
 }
 
+.globalButtonColor{
+  background-color: #215e41;
+}
+
+.globalTextColor{
+  color: #40916C;
+}
+
+.heroBg{
+  background-color: #112B1E;
+}
+
 .dynamic-paddingUP-Down {
   padding: 80px 0px 80px 0px;
 }
@@ -53,6 +65,10 @@ body {
 
 .container {
   @apply max-w-[1440px] mx-auto px-4 md:px-10;
+}
+
+.flightCarHotelContainer {
+  @apply max-w-[1300px] mx-auto px-4 md:px-10;
 }
 
 .mediumDeviceContainer {

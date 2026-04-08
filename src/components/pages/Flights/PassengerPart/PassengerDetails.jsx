@@ -64,7 +64,7 @@ const PassengerDetails = () => {
         currentStep={3}
         steps={flightSteps}
       ></FlightDetailsDynamicHeader>
-      <div className="min-h-screen bg-[#F7F3EE] dynamic-paddingUP-Down">
+      <div className="min-h-screen bg-[#F7F3EE] dynamic-paddingUP-Down flightCarHotelContainer">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="container grid grid-cols-1 lg:grid-cols-3 gap-6"
