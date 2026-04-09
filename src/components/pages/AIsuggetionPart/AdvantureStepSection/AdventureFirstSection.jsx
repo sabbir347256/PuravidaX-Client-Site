@@ -4,6 +4,7 @@ import { advantureSteps } from "../AdventureHeader/AdvantureStep";
 import { useForm } from "react-hook-form";
 import { BiCalendar } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 const AdventureFirstSection = () => {
   const {
@@ -17,8 +18,11 @@ const AdventureFirstSection = () => {
     },
   });
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
     console.log("Step 1 Data:", data);
+    navigate('/second-step-adventure')
   };
   return (
     <div className="min-h-screen bg-[#fdfaf5]">

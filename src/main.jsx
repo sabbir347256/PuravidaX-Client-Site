@@ -21,6 +21,7 @@ import CarPayment from "./components/pages/CardModel/CarPayment/CarPayment";
 import ExperienceSection from "./components/pages/ExperiencSection/ExperienceSection";
 import ExperiencePaymentSection from "./components/pages/ExperiencSection/ExperiencePaymentSection";
 import AdventureFirstSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFirstSection";
+import AdventureSecondSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSecondSection";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
         path: "/experience-payment",
         element: <ExperiencePaymentSection></ExperiencePaymentSection>,
       },
+      {
+        path :"/second-step-adventure",
+        element : <AdventureSecondSection></AdventureSecondSection>
+      }
     ],
   },
 ]);
