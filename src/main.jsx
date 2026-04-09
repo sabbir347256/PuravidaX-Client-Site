@@ -16,6 +16,8 @@ import PaymentSection from "./components/pages/Flights/Payment/PaymentSection";
 import DemoPage from "./components/pages/DemoPage/DemoPage";
 import CarSearchSection from "./components/pages/CardModel/SearchPart/CarSearchSection";
 import CarDetails from "./components/pages/CardModel/CarDetails/CarDetails";
+import DriverInfo from "./components/pages/CardModel/DriverInfo/DriverInfo";
+import CarPayment from "./components/pages/CardModel/CarPayment/CarPayment";
 
 const router = createBrowserRouter([
   {
@@ -51,37 +53,45 @@ const router = createBrowserRouter([
         element: <BaggageDetails></BaggageDetails>,
       },
       {
-        path : "/seat-plan",
-        element : <SeatDetails></SeatDetails>
+        path: "/seat-plan",
+        element: <SeatDetails></SeatDetails>,
       },
       {
-        path : '/procced-to-payment',
-        element : <PaymentSection></PaymentSection>
+        path: "/procced-to-payment",
+        element: <PaymentSection></PaymentSection>,
       },
       {
-        path : '/experiences',
-        element : <DemoPage></DemoPage>
+        path: "/experiences",
+        element: <DemoPage></DemoPage>,
       },
       {
-        path : '/hotels',
-        element : <DemoPage></DemoPage>
+        path: "/hotels",
+        element: <DemoPage></DemoPage>,
       },
       {
-        path : '/cars',
-        element : <CarSearchSection></CarSearchSection>
+        path: "/cars",
+        element: <CarSearchSection></CarSearchSection>,
       },
       {
-        path : '/plan-trip',
-        element : <DemoPage></DemoPage>
+        path: "/plan-trip",
+        element: <DemoPage></DemoPage>,
       },
       {
-        path : '/rewards',
-        element : <DemoPage></DemoPage>
+        path: "/rewards",
+        element: <DemoPage></DemoPage>,
       },
       {
-        path : "/car-details",
-        element : <CarDetails></CarDetails>
-      }
+        path: "/car-details",
+        element: <CarDetails></CarDetails>,
+      },
+      {
+        path: "/driver-info",
+        element : <DriverInfo></DriverInfo>
+      },
+      {
+        path: "/car-payment",
+        element : <CarPayment></CarPayment>
+      },
     ],
   },
 ]);

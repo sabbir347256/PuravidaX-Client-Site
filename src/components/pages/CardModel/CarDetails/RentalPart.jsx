@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { FaArrowLeft, FaIdCard } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
-const RentalPart = ({ carInfo, extrasList }) => {
+const RentalPart = ({ carInfo, extrasList,subMitButtonText ,backButtonText}) => {
   const { register, handleSubmit, control } = useForm({
     defaultValues: {
       selectedExtras: [],
@@ -24,6 +25,7 @@ const RentalPart = ({ carInfo, extrasList }) => {
     0,
   );
   const finalTotal = baseTotal + extrasTotal;
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log({
@@ -32,6 +34,9 @@ const RentalPart = ({ carInfo, extrasList }) => {
       totalAmount: finalTotal,
       extrasDetails: selectedExtrasData,
     });
+
+    navigate('/driver-info')
+
   };
   return (
     <div className="lg:col-span-1">
@@ -71,19 +76,19 @@ const RentalPart = ({ carInfo, extrasList }) => {
             type="submit"
             className="w-full globalButtonColor hover:bg-[#43926e] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-100"
           >
-            <FaIdCard /> Driver Details
+            <FaIdCard /> {subMitButtonText}
           </button>
           <button
             type="button"
             className="w-full border-2 border-emerald-600 text-emerald-700 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-50 transition-all"
           >
-            <FaArrowLeft size={12} /> Back to Cars
+            <FaArrowLeft size={12} /> {backButtonText}
           </button>
         </div>
       </div>
 
       <div className="hidden">
-        {extrasList.map((extra) => (
+        {extrasList.map((extra) => ( 
           <input
             key={extra.id}
             type="checkbox"
