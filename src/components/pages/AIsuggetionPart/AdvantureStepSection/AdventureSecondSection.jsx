@@ -52,7 +52,7 @@ const AdventureSecondSection = () => {
         currentStep={2}
         steps={advantureSteps}
       />
-      <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4 md:p-4">
         <div className="bg-white rounded-[30px] md:rounded-[40px] p-6 sm:p-10 md:p-16 shadow-sm adventureContainer w-full border border-stone-100">
           <div className="mb-6">
             <span className="text-emerald-500 font-bold tracking-[0.2em] text-[10px] md:text-xs uppercase">
@@ -170,7 +170,7 @@ const AdventureSecondSection = () => {
               </button>
               <button
                 type="submit"
-                className="flex items-center gap-2 px-10 py-3 bg-[#1a4d3a] hover:bg-[#133a2b] text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg shadow-emerald-900/10"
+                className="flex items-center gap-2 px-10 py-3 globalButtonColor hover:bg-[#133a2b] text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg shadow-emerald-900/10"
               >
                 Next
                 <BsArrowRight size={18} />

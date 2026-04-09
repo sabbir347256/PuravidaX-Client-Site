@@ -91,7 +91,7 @@ const AdventureFirstSection = () => {
             <div className="flex justify-center md:justify-end">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-[#1a4d3a] hover:bg-[#133a2b] text-white px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-bold flex items-center justify-center gap-3 text-base md:text-lg transition-all active:scale-95 shadow-lg shadow-emerald-900/10"
+                className="w-full md:w-auto globalButtonColor hover:bg-[#133a2b] text-white px-8 md:px-12 py-3 md:py-3 rounded-xl md:rounded-2xl font-bold flex items-center justify-center gap-3 text-base md:text-lg transition-all active:scale-95 shadow-lg shadow-emerald-900/10"
               >
                 Next
                 <BsArrowRight size={20} className="mt-0.5" />
