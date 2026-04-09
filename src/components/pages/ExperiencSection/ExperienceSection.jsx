@@ -166,7 +166,7 @@ const ExperienceSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {filteredData.length > 0 ? (
             filteredData.map((exp) => (
-              <ExperienceCard key={exp.id} data={exp} />
+              <ExperienceCard key={exp.id} data={exp}  />
             ))
           ) : (
             <div className="col-span-full text-center py-20 text-slate-400">

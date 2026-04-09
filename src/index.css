@@ -43,6 +43,16 @@ body {
   }
 }
 
+.dynamic-paddingUP-Down-adventuer {
+  padding: 40px 0px 120px 0px;
+}
+
+@media (max-width: 767px) {
+  .dynamic-paddingUP-Down-adventuer {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
 .global-button-background{
   background-color: #1a3a2a;
 }
@@ -85,8 +95,15 @@ body {
   @apply max-w-[1440px] mx-auto px-4 md:px-10;
 }
 
+.adventureContainer {
+  @apply max-w-[900px] mx-auto px-4 md:px-10;
+}
+
 .flightCarHotelContainer {
   @apply max-w-[1300px] mx-auto px-4 md:px-10;
+}
+.adventureContainer {
+  @apply max-w-[900px] mx-auto px-4 md:px-10;
 }
 
 .mediumDeviceContainer {

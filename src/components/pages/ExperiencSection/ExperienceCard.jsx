@@ -29,7 +29,7 @@ const ExperienceCard = ({ data }) => {
           <div className="flex items-center gap-1 text-xs">
             <SiTarget size={14} className="text-orange-400 fill-orange-400" />
             <span className="font-bold text-slate-700">{data.rating}</span>
-            <span className="text-slate-400">({data.reviews})</span>
+            <span className="text-slate-400">({data.reviews})</span> 
           </div>
         </div>
 
