@@ -18,6 +18,7 @@ import CarSearchSection from "./components/pages/CardModel/SearchPart/CarSearchS
 import CarDetails from "./components/pages/CardModel/CarDetails/CarDetails";
 import DriverInfo from "./components/pages/CardModel/DriverInfo/DriverInfo";
 import CarPayment from "./components/pages/CardModel/CarPayment/CarPayment";
+import ExperienceSection from "./components/pages/ExperiencSection/ExperienceSection";
 
 const router = createBrowserRouter([
   {
@@ -61,10 +62,6 @@ const router = createBrowserRouter([
         element: <PaymentSection></PaymentSection>,
       },
       {
-        path: "/experiences",
-        element: <DemoPage></DemoPage>,
-      },
-      {
         path: "/hotels",
         element: <DemoPage></DemoPage>,
       },
@@ -92,6 +89,10 @@ const router = createBrowserRouter([
         path: "/car-payment",
         element : <CarPayment></CarPayment>
       },
+      {
+        path : "/experiences",
+        element : <ExperienceSection></ExperienceSection>
+      }
     ],
   },
 ]);
