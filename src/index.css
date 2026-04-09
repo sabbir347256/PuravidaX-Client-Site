@@ -58,6 +58,24 @@ body {
   }
 }
 
+
+.globalHeadingTextSize {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .globalHeadingTextSize {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .globalHeadingTextSize {
+    font-size: 50px;
+  }
+}
+
 /* .allPY{
   padding-top: 80px;
   padding-bottom: 80px

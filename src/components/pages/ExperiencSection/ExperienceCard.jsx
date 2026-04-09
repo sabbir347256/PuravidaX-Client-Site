@@ -2,6 +2,7 @@ import React from "react";
 import { BiMapPin } from "react-icons/bi";
 import { CgLock } from "react-icons/cg";
 import { SiTarget } from "react-icons/si";
+import { NavLink } from "react-router";
 
 const ExperienceCard = ({ data }) => {
   return (
@@ -53,9 +54,11 @@ const ExperienceCard = ({ data }) => {
             </span>
             <span className="text-slate-400 text-xs ml-1">per {data.unit}</span>
           </div>
-          <button className="globalButtonColor hover:bg-[#154231] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
+          <NavLink to='/experience-payment'>
+            <button className="globalButtonColor hover:bg-[#154231] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
             Book Experience
           </button>
+          </NavLink>
         </div>
       </div>
     </div>

@@ -112,62 +112,79 @@ const ExperienceSection = () => {
       ? experiencesData
       : experiencesData.filter((item) => item.category === activeFilter);
   return (
-    <div className="min-h-screen bg-[#fdfaf5]">
-      <div className="heroBg  pt-16 pb-12 px-6 ">
+    <div className="min-h-screen">
+      <div className="heroBg pt-12 pb-10 md:pt-20 md:pb-16 px-4">
         <header className="container">
-          <nav className="text-white/60 text-sm mb-4">
+          <nav className="text-white/60 text-xs md:text-sm mb-4">
             Home / <span className="text-white">Experiences</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 italic">
+
+          <h1 className="globalHeadingTextSize font-bold text-white mb-6 md:mb-10  leading-tight">
             Discover Costa Rica{" "}
-            <span className="text-emerald-400 not-italic font-medium">
+            <span className="text-[#1f6b4e] italic font-medium block md:inline">
               Experiences
             </span>
           </h1>
 
           <form
             onSubmit={handleSubmit(onSearch)}
-            className="flex bg-white rounded-xl p-2 shadow-lg"
+            className="flex bg-white rounded-xl p-1.5 md:p-2 shadow-xl max-w-3xl"
           >
             <input
               {...register("searchTerm")}
-              placeholder="Search experiences, places..."
-              className="flex-1 px-4 py-2 outline-none text-slate-700"
+              placeholder="Search experiences..."
+              className="flex-1 px-3 md:px-5 py-2 md:py-3 outline-none text-slate-700 text-sm md:text-base w-full"
             />
-            <button className="globalButtonColor text-white px-8 py-2 rounded-lg font-bold hover:bg-[#154231] transition-colors">
+            <button className="globalButtonColor text-white px-5 md:px-10 py-2 md:py-3 rounded-lg font-bold hover:bg-[#154231] transition-all text-sm md:text-base shrink-0">
               Search
             </button>
           </form>
         </header>
       </div>
 
-      <div>
-        <div className=" ">
-          <div className="bg-white border-b">
-            <div className="flex flex-wrap gap-3  container   p-6">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveFilter(cat)}
-                  className={`px-6 py-2 rounded-full border text-sm font-medium transition-all ${
-                    activeFilter === cat
-                      ? "bg-[#1e5d44] text-white border-[#1e5d44]"
-                      : "bg-white text-slate-600 border-stone-200 hover:border-stone-400"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container dynamic-paddingUP-Down">
-            {filteredData.map((exp) => (
-              <ExperienceCard key={exp.id} data={exp} />
+      <div className="bg-white border-b sticky top-0 z-30 shadow-sm">
+        <div className="container">
+          <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto no-scrollbar p-4 md:p-6 items-center">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`px-4 md:px-6 py-2 rounded-full border text-xs md:text-sm font-semibold transition-all whitespace-nowrap ${
+                  activeFilter === cat
+                    ? "bg-[#1e5d44] text-white border-[#1e5d44] shadow-md"
+                    : "bg-white text-slate-600 border-stone-200 hover:border-stone-400"
+                }`}
+              >
+                {cat}
+              </button>
             ))}
           </div>
         </div>
       </div>
+
+      <main className="container px-4 py-8 md:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          {filteredData.length > 0 ? (
+            filteredData.map((exp) => (
+              <ExperienceCard key={exp.id} data={exp} />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-20 text-slate-400">
+              No experiences found in this category.
+            </div>
+          )}
+        </div>
+      </main>
+
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </div>
   );
 };

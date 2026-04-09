@@ -19,6 +19,7 @@ import CarDetails from "./components/pages/CardModel/CarDetails/CarDetails";
 import DriverInfo from "./components/pages/CardModel/DriverInfo/DriverInfo";
 import CarPayment from "./components/pages/CardModel/CarPayment/CarPayment";
 import ExperienceSection from "./components/pages/ExperiencSection/ExperienceSection";
+import ExperiencePaymentSection from "./components/pages/ExperiencSection/ExperiencePaymentSection";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path : "/experiences",
         element : <ExperienceSection></ExperienceSection>
+      },
+      {
+        path : '/experience-payment',
+        element : <ExperiencePaymentSection></ExperiencePaymentSection>
       }
     ],
   },
