@@ -79,7 +79,7 @@ const DashboardPageContent = () => {
               </p>
             </div>
           </div>
-          <button className="bg-[#2D5A4A] hover:bg-[#366956] text-white px-6 py-3 rounded-xl flex items-center gap-2 transition-colors shrink-0 font-medium">
+          <button className="globalButtonColor hover:bg-[#366956] text-white px-6 py-3 rounded-xl flex items-center gap-2 transition-colors shrink-0 font-medium">
             <MessageSquare className="w-5 h-5 fill-white" />
             Open Chat
           </button>
@@ -148,7 +148,7 @@ const DashboardPageContent = () => {
 
                   {trip.isDraft ? (
                     <div className="flex gap-3">
-                      <button className="bg-[#1B5E41] text-white px-6 py-2.5 rounded-xl font-medium text-sm">
+                      <button className="globalButtonColor text-white px-6 py-2.5 rounded-xl font-medium text-sm">
                         Complete Booking
                       </button>
                       <button className="border border-[#1B5E41] text-[#1B5E41] px-6 py-2.5 rounded-xl font-medium text-sm">
@@ -172,7 +172,7 @@ const DashboardPageContent = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <button className="bg-[#21674E] text-white p-4 rounded-xl flex items-center justify-center gap-3 font-semibold hover:bg-[#1B5641] transition-colors">
+          <button className="globalButtonColor text-white p-4 rounded-xl flex items-center justify-center gap-3 font-semibold hover:bg-[#1B5641] transition-colors">
             <Plane className="w-5 h-5 fill-white" /> Book Flights
           </button>
           <button className="bg-[#12241B] text-white p-4 rounded-xl flex items-center justify-center gap-3 font-semibold hover:bg-black transition-colors">

@@ -49,7 +49,7 @@ const MainDashboard = () => {
     { name: "Sign Out", icon: <FaSignOutAlt size={18} />, section: "ACCOUNT" },
   ];
   return (
-    <div className="flex flex-col min-h-screen bg-[#FBF9F4]">
+    <div className="flex flex-col min-h-screen globalBg">
       <div className="fixed top-0 w-full z-[60]">
         <Navbar />
       </div>
