@@ -7,7 +7,7 @@ const HotelSummerySection = ({
   secondaryBtnText,
   onAction,
 }) => {
-  const { handleSubmit } = useForm();
+  const { handleSubmit } = useForm ();
 
   const onSubmit = (formData) => {
     // যখন বাটনে ক্লিক হবে, তখন এই ফাংশনটি কল হবে

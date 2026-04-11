@@ -25,7 +25,7 @@ const AdventureFirstSection = () => {
     navigate('/second-step-adventure')
   };
   return (
-    <div className="min-h-screen bg-[#fdfaf5]">
+    <div className="min-h-screen ">
       <AdvantureDynamicHeader
         title="Design Your Adventure"
         subtitle="Tell us what you want. We'll craft your perfect Costa Rica experience"
@@ -33,7 +33,7 @@ const AdventureFirstSection = () => {
         steps={advantureSteps}
       />
 
-      <div className="px-4 py-8 md:py-12 lg:py-16">
+      <div className="px-4 py-8">
         <div className="bg-white rounded-[30px] md:rounded-[40px] p-6 sm:p-10 md:p-16 shadow-sm border border-stone-100 adventureContainer w-full">
           <div className="mb-4 md:mb-6">
             <span className="text-emerald-500 font-bold tracking-[0.2em] text-[10px] md:text-xs uppercase">

@@ -143,7 +143,7 @@ const ExperienceSection = () => {
       </div>
 
       <div className="bg-white border-b sticky top-0 z-30 shadow-sm">
-        <div className="container">
+        <div className="lg:px-60">
           <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-3 overflow-x-auto no-scrollbar p-4 md:p-6 items-center">
             {categories.map((cat) => (
               <button

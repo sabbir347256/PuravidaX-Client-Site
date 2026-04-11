@@ -8,7 +8,7 @@ const FlightDetailsDynamicHeader = ({
   steps,
 }) => {
   return (
-    <header className="bg-[#133123] py-8 md:py-10 text-white">
+    <header className="bg-[#133123] text-white">
       <div className="container">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">{title}</h1>
         <p className="text-sm md:text-base text-gray-300 mb-8">{subtitle}</p>

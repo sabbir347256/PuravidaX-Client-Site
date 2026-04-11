@@ -92,7 +92,7 @@ body {
 } */
 
 .container {
-  @apply max-w-[1440px] mx-auto px-4 md:px-10;
+  @apply max-w-[1440px] mx-auto px-4 md:px-10 pt-12 pb-16;
 }
 
 .adventureContainer {
@@ -100,7 +100,7 @@ body {
 }
 
 .flightCarHotelContainer {
-  @apply max-w-[1300px] mx-auto px-4 md:px-10;
+  @apply max-w-[1300px] mx-auto px-4 py-5 md:p-10 ;
 }
 .adventureContainer {
   @apply max-w-[900px] mx-auto px-4 md:px-10;

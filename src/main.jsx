@@ -22,6 +22,14 @@ import ExperienceSection from "./components/pages/ExperiencSection/ExperienceSec
 import ExperiencePaymentSection from "./components/pages/ExperiencSection/ExperiencePaymentSection";
 import AdventureFirstSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFirstSection";
 import AdventureSecondSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSecondSection";
+import HotelSearchSection from "./components/pages/hotelModel/hotelSection/HotelSearchSection";
+import HotelDetails from "./components/pages/hotelModel/hotelDetails/HotelDetails";
+import GuestDetails from "./components/pages/hotelModel/Guest/GuestDetails";
+import HotelPaymentSection from "./components/pages/hotelModel/HotelPayment/HotelPaymentSection";
+import AdvantureThirdSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdvantureThirdSection";
+import AdventureFourSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFourSection";
+import AdventureFiveSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFiveSection";
+import AdventureSixSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSixSection";
 
 const router = createBrowserRouter([
   {
@@ -66,7 +74,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/hotels",
-        element: <DemoPage></DemoPage>,
+        element: <HotelSearchSection></HotelSearchSection>,
       },
       {
         path: "/cars",
@@ -103,6 +111,34 @@ const router = createBrowserRouter([
       {
         path :"/second-step-adventure",
         element : <AdventureSecondSection></AdventureSecondSection>
+      },
+      {
+        path : "/hotel-details",
+        element : <HotelDetails></HotelDetails>
+      },
+      {
+        path : "/guest-details",
+        element : <GuestDetails></GuestDetails>
+      },
+      {
+        path : "/hotel-booking-payment",
+        element :<HotelPaymentSection></HotelPaymentSection>
+      },
+      {
+        path : "/traveler-options",
+        element : <AdvantureThirdSection></AdvantureThirdSection>
+      },
+      {
+        path : "/finishing-touch",
+        element : <AdventureFourSection></AdventureFourSection>
+      },
+      {
+        path : "/crafting",
+        element : <AdventureFiveSection></AdventureFiveSection>
+      },
+      {
+        path : "/complete-journey",
+        element : <AdventureSixSection></AdventureSixSection>
       }
     ],
   },

@@ -15,7 +15,7 @@ const SearchSeciton = () => {
   };
   return (
     <div className="min-h-screen bg-[#F7F2E9]">
-      <section className="bg-[#112B1E] pt-12 pb-24">
+      <section className="bg-[#112B1E] ">
         <div className="container">
           <p className="text-[#5BA471] text-xs font-bold uppercase tracking-widest mb-2">
             Book Your Flight
@@ -26,7 +26,6 @@ const SearchSeciton = () => {
 
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl">
             <form onSubmit={handleSubmit(onSubmit)}>
-              {/* Top Grid: Inputs */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                 <SearchInput label="FROM" name="from" register={register} />
                 <SearchInput label="TO" name="to" register={register} />
@@ -44,7 +43,6 @@ const SearchSeciton = () => {
                 />
               </div>
 
-              {/* Bottom Row: Selects & Button */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="flex flex-col lg:flex-row gap-4 w-full md:w-auto">
                   <select

@@ -4,6 +4,7 @@ import { BiHeart, BiHome, BiMinus, BiPlus, BiUser } from "react-icons/bi";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import AdvantureDynamicHeader from "../AdventureHeader/AdvantureDynamicHeader";
 import { advantureSteps } from "../AdventureHeader/AdvantureStep";
+import { useNavigate } from "react-router";
 
 const AdventureSecondSection = () => {
   const { register, handleSubmit, setValue, watch } = useForm({
@@ -17,10 +18,12 @@ const AdventureSecondSection = () => {
   const travelerType = watch("travelerType");
   const adults = watch("adults");
   const children = watch("children");
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log("Submitted Data:", data);
     alert("Form Submitted! Check Console.");
+    navigate('/traveler-options')
   };
 
   const travelerOptions = [

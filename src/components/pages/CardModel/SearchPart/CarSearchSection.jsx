@@ -65,7 +65,7 @@ const CarSearchSection = () => {
 
   return (
     <div className="globalBg ">
-      <section className="heroBg  pt-12 dynamic-paddingUP-Down ">
+      <section className="heroBg">
         <div className="container mx-auto px-4">
           <p className="text-[#5BA471] text-xs font-bold uppercase tracking-widest mb-2">
             Car Rental

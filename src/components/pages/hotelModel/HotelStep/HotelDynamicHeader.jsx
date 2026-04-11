@@ -1,9 +1,9 @@
 import React from "react";
 import { BiCheck } from "react-icons/bi";
-
-const CarDetailsDynamicHeader = ({ title, subtitle, currentStep, steps }) => {
+ 
+const HotelDynamicHeader = ({ title, subtitle, currentStep, steps }) => {
   return (
-    <header className="bg-[#133123]  text-white">
+    <header className="bg-[#133123] text-white">
       <div className="container">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">{title}</h1>
         <p className="text-sm md:text-base text-gray-300 mb-8">{subtitle}</p>
@@ -56,4 +56,4 @@ const CarDetailsDynamicHeader = ({ title, subtitle, currentStep, steps }) => {
   );
 };
 
-export default CarDetailsDynamicHeader;
+export default HotelDynamicHeader;

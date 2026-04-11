@@ -3,22 +3,23 @@ import { BiLock, BiLockAlt } from "react-icons/bi";
 import { BsHeadphones } from "react-icons/bs";
 import { FiRotateCcw } from "react-icons/fi";
 
-const OrderSummary = () => {
+const HotelOrderSummary = () => {
   return (
     <div className="w-full lg:w-[380px]">
       <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-50 sticky top-8">
         <h2 className="text-xl font-bold mb-6">Order Summary</h2>
         <div className="space-y-4 mb-6">
-          <div className="flex justify-between items-center text-sm">
+          <span className="text-gray-500">🏨 Nayara Tented Camp</span>
+          {/* <div className="flex justify-between items-center text-sm">
             <span className="text-gray-500">✈️ Premium Economy × 2</span>
             <span className="font-bold">$856</span>
-          </div>
+          </div> */}
           <div className="flex justify-between items-center text-sm border-t pt-4">
-            <span className="text-gray-500 text-xs">Travel Insurance</span>
+            <span className="text-gray-500 text-xs">Jungle Luxury Tent × 7 nights</span>
             <span className="font-bold text-xs">$84</span>
           </div>
           <div className="flex justify-between items-center text-sm">
-            <span className="text-gray-500 text-xs">Taxes & fees</span>
+            <span className="text-gray-500 text-xs">Daily Breakfast</span>
             <span className="font-bold text-xs">$86</span>
           </div>
         </div>
@@ -56,5 +57,4 @@ const OrderSummary = () => {
   );
 };
 
-export default OrderSummary;
- 
+export default HotelOrderSummary;

@@ -14,7 +14,7 @@ import { NavLink } from "react-router";
 
 const FlightDetails = () => {
   return (
-    <div className="min-h-screen bg-[#F7F2E9] ">
+    <div className="min-h-screen ">
       <FlightDetailsDynamicHeader
         title="Flight Details"
         subtitle="Review your selected flight before proceeding"
