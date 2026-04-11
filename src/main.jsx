@@ -30,6 +30,8 @@ import AdvantureThirdSection from "./components/pages/AIsuggetionPart/AdvantureS
 import AdventureFourSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFourSection";
 import AdventureFiveSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureFiveSection";
 import AdventureSixSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSixSection";
+import AdventureSevenSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSevenSection";
+import MainDashboard from "./components/pages/ProfileDashboard/Dashboard/MainDashboard";
 
 const router = createBrowserRouter([
   {
@@ -109,38 +111,46 @@ const router = createBrowserRouter([
         element: <ExperiencePaymentSection></ExperiencePaymentSection>,
       },
       {
-        path :"/second-step-adventure",
-        element : <AdventureSecondSection></AdventureSecondSection>
+        path: "/second-step-adventure",
+        element: <AdventureSecondSection></AdventureSecondSection>,
       },
       {
-        path : "/hotel-details",
-        element : <HotelDetails></HotelDetails>
+        path: "/hotel-details",
+        element: <HotelDetails></HotelDetails>,
       },
       {
-        path : "/guest-details",
-        element : <GuestDetails></GuestDetails>
+        path: "/guest-details",
+        element: <GuestDetails></GuestDetails>,
       },
       {
-        path : "/hotel-booking-payment",
-        element :<HotelPaymentSection></HotelPaymentSection>
+        path: "/hotel-booking-payment",
+        element: <HotelPaymentSection></HotelPaymentSection>,
       },
       {
-        path : "/traveler-options",
-        element : <AdvantureThirdSection></AdvantureThirdSection>
+        path: "/traveler-options",
+        element: <AdvantureThirdSection></AdvantureThirdSection>,
       },
       {
-        path : "/finishing-touch",
-        element : <AdventureFourSection></AdventureFourSection>
+        path: "/finishing-touch",
+        element: <AdventureFourSection></AdventureFourSection>,
       },
       {
-        path : "/crafting",
-        element : <AdventureFiveSection></AdventureFiveSection>
+        path: "/crafting",
+        element: <AdventureFiveSection></AdventureFiveSection>,
       },
       {
-        path : "/complete-journey",
-        element : <AdventureSixSection></AdventureSixSection>
-      }
+        path: "/complete-journey",
+        element: <AdventureSixSection></AdventureSixSection>,
+      },
+      {
+        path: "/final-book-journey",
+        element: <AdventureSevenSection></AdventureSevenSection>,
+      },
     ],
+  },
+  {
+    path: "/profile-dashboard",
+    element: <MainDashboard></MainDashboard>,
   },
 ]);
 

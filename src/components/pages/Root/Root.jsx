@@ -10,12 +10,12 @@ const Root = () => {
 
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
   return (
-    <div className="globalBg">
-      <Navbar></Navbar>
-      <div className="mt-16">
-        <Outlet></Outlet>
+    <div className="min-h-screen flex flex-col globalBg"> 
+      <Navbar />
+      <div className="mt-16 flex-grow"> 
+        <Outlet />
       </div>
-      {!shouldHideFooter && <Footer></Footer>}
+      {!shouldHideFooter && <Footer />}
     </div>
   );
 };

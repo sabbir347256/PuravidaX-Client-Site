@@ -14,11 +14,11 @@ const Navbar = () => {
     { name: "Hotels", path: "/hotels" },
     { name: "Car Rentals", path: "/cars" },
     { name: "Plan Your Trip", path: "/plan-trip" },
-    { name: "Rewards", path: "/rewards" },
+    // { name: "Rewards", path: "/rewards" },
   ];
   return (
     <nav className="w-full bg-[#1a3a2a] text-white fixed top-0 z-50 cp">
-      <div className="mediumDeviceContainer">
+      <div className="">
         <div className="flex items-center justify-between h-16">
           <div className="items-start text-start gap-2">
             <img
