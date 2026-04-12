@@ -20,13 +20,15 @@ const Navbar = () => {
     <nav className="w-full bg-[#1a3a2a] text-white fixed top-0 z-50 cp">
       <div className="">
         <div className="flex items-center justify-between h-16">
-          <div className="items-start text-start gap-2">
-            <img
-              src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775605273/460debcf4221f79a0116a837f2d356714eecf599_pm9t7g.png"
-              alt="logo"
-              className="w-full h-24"
-            />
-          </div>
+          <NavLink to='/'>
+            <div className="items-start text-start gap-2">
+              <img
+                src="https://res.cloudinary.com/dunn8qryc/image/upload/v1775605273/460debcf4221f79a0116a837f2d356714eecf599_pm9t7g.png"
+                alt="logo"
+                className="w-full h-24"
+              />
+            </div>
+          </NavLink>
           <div className="hidden lg:flex items-center gap-6">
             {navLinks?.map((item) => (
               <NavLink
