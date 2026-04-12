@@ -25,28 +25,73 @@ import { FaRobot, FaSignOutAlt } from "react-icons/fa";
 import { RiMemoriesLine } from "react-icons/ri";
 import DashboardPageContent from "../DashpageContent/DashboardPageContent";
 import Navbar from "../../Shared/Navbar";
+import AiPart from "../DashpageContent/AiPart/AiPart";
+import Explore from "./Explore";
+import { NavLink, Outlet } from "react-router";
 const MainDashboard = () => {
-  const [activeTab, setActiveTab] = useState("Dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const menuItems = [
-    { name: "Dashboard", icon: <LayoutDashboard size={18} />, section: "MAIN" },
+    {
+      name: "Dashboard",
+      path: "/profile-dashboard/home",
+      icon: <LayoutDashboard size={18} />,
+      section: "MAIN",
+    },
     {
       name: "AI Concierge",
+      path: "/profile-dashboard/ai-concierge",
       icon: <FaRobot size={18} />,
       section: "MAIN",
     },
-    { name: "Explore", icon: <Compass size={18} />, section: "MAIN" },
-    { name: "Flights", icon: <Plane size={18} />, section: "BOOKING" },
-    { name: "Hotels", icon: <Hotel size={18} />, section: "BOOKING" },
-    { name: "Car Rentals", icon: <Car size={18} />, section: "BOOKING" },
-    { name: "Profile", icon: <User2 size={18} />, section: "ACCOUNT" },
     {
-      name: "Memories",
+      name: "Explore",
+      path: "/profile-dashboard/explore",
+      icon: <Compass size={18} />,
+      section: "MAIN",
+    },
+    // {
+    //   name: "Flights",
+    //   path: "/profile-dashboard/flights",
+    //   icon: <Plane size={18} />,
+    //   section: "BOOKING",
+    // },
+    // {
+    //   name: "Hotels",
+    //   path: "/profile-dashboard/hotels",
+    //   icon: <Hotel size={18} />,
+    //   section: "BOOKING",
+    // },
+    // {
+    //   name: "Car Rentals",
+    //   path: "/profile-dashboard/cars",
+    //   icon: <Car size={18} />,
+    //   section: "BOOKING",
+    // },
+    {
+      name: "Profile",
+      path: "/profile-dashboard/profile",
+      icon: <User2 size={18} />,
+      section: "ACCOUNT",
+    },
+    {
+      name: "Notifications",
+      path: "/profile-dashboard/notifications",
       icon: <RiMemoriesLine size={18} />,
       section: "ACCOUNT",
     },
-    { name: "Sign Out", icon: <FaSignOutAlt size={18} />, section: "ACCOUNT" },
+    {
+      name: "Memories",
+      path: "/profile-dashboard/memories",
+      icon: <RiMemoriesLine size={18} />,
+      section: "ACCOUNT",
+    },
+    {
+      name: "Sign Out",
+      path: "/logout",
+      icon: <FaSignOutAlt size={18} />,
+      section: "ACCOUNT",
+    },
   ];
   return (
     <div className="flex flex-col min-h-screen globalBg">
@@ -77,7 +122,7 @@ const MainDashboard = () => {
             </div>
 
             <nav className="flex-1 overflow-y-auto space-y-8 custom-scrollbar">
-              {["MAIN", "BOOKING", "ACCOUNT"].map((section) => (
+              {["MAIN", "ACCOUNT"].map((section) => (
                 <div key={section}>
                   <p className="text-[10px] font-bold text-gray-500 tracking-widest mb-4 uppercase">
                     {section}
@@ -86,20 +131,21 @@ const MainDashboard = () => {
                     {menuItems
                       .filter((i) => i.section === section)
                       .map((item) => (
-                        <button
+                        <NavLink
                           key={item.name}
-                          onClick={() => {
-                            setActiveTab(item.name);
-                            setIsSidebarOpen(false);
-                          }}
-                          className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                            activeTab === item.name
-                              ? "bg-[#1e4533] text-[#52a37a] shadow-lg"
-                              : "text-gray-400 hover:text-white hover:bg-white/5"
-                          }`}
+                          to={item.path}
+                          onClick={() => setIsSidebarOpen(false)}
+                          className={({ isActive }) =>
+                            `w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+                              isActive
+                                ? "bg-[#1e4533] text-[#52a37a] shadow-lg"
+                                : "text-gray-400 hover:text-white hover:bg-white/5"
+                            }`
+                          }
                         >
-                          {item.icon} {item.name}
-                        </button>
+                          {item.icon}
+                          <span>{item.name}</span>
+                        </NavLink>
                       ))}
                   </ul>
                 </div>
@@ -117,21 +163,13 @@ const MainDashboard = () => {
               <Menu size={24} />
             </button>
             <h2 className="font-bold text-emerald-900">Adventure.AI</h2>
-            <div className="w-8" /> {/* Balance spacer */}
+            <div className="w-8" />
           </header>
 
-          <div className="p-4 md:p-8 lg:p-10 w-full">
-            {activeTab === "Dashboard" && (
-              <div className="animate-in fade-in duration-500">
-                <DashboardPageContent />
-              </div>
-            )}
-
-            {activeTab !== "Dashboard" && (
-              <div className="flex items-center justify-center h-64 text-gray-400">
-                {activeTab} content coming soon...
-              </div>
-            )}
+          <div className="">
+            <div className="animate-in fade-in duration-500">
+              <Outlet />
+            </div>
           </div>
         </main>
       </div>

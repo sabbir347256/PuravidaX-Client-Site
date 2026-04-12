@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 import "./index.css";
 import { HelmetProvider } from "react-helmet-async";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import Root from "./components/pages/Root/Root";
 import Home from "./components/pages/HomePages/Home";
 import Signup from "./components/pages/authenticationPages/Signup";
@@ -32,6 +32,12 @@ import AdventureFiveSection from "./components/pages/AIsuggetionPart/AdvantureSt
 import AdventureSixSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSixSection";
 import AdventureSevenSection from "./components/pages/AIsuggetionPart/AdvantureStepSection/AdventureSevenSection";
 import MainDashboard from "./components/pages/ProfileDashboard/Dashboard/MainDashboard";
+import DashboardPageContent from "./components/pages/ProfileDashboard/DashpageContent/DashboardPageContent";
+import AiPart from "./components/pages/ProfileDashboard/DashpageContent/AiPart/AiPart";
+import Explore from "./components/pages/ProfileDashboard/Dashboard/Explore";
+import Profile from "./components/pages/ProfileDashboard/DashpageContent/Profile/Profile";
+import Notifications from "./components/pages/ProfileDashboard/DashpageContent/Notifications/Notifications";
+import Memories from "./components/pages/ProfileDashboard/DashpageContent/Memories/Memories";
 
 const router = createBrowserRouter([
   {
@@ -146,12 +152,48 @@ const router = createBrowserRouter([
         path: "/final-book-journey",
         element: <AdventureSevenSection></AdventureSevenSection>,
       },
+       {
+        path: "logout",
+        element: <DemoPage />,
+      },
     ],
   },
   {
     path: "/profile-dashboard",
-    element: <MainDashboard></MainDashboard>,
+    element: <MainDashboard />,
+    children: [
+      {
+        index: true, 
+        element: <Navigate to="home" replace />,
+      },
+      {
+        path: "home",
+        element: <DashboardPageContent />,
+      },
+      {
+        path: "ai-concierge",
+        element: <AiPart />,
+      },
+      {
+        path: "explore",
+        element: <Explore />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "notifications",
+        element: <Notifications />,
+      },
+      {
+        path: "memories",
+        element: <Memories />,
+      },
+     
+    ],
   },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
